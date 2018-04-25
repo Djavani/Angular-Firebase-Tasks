@@ -28,8 +28,8 @@ export class TaskListComponent implements OnInit {
   }
 
   onPerformTask(task: Task): void {
-    console.log(task);
-
+    task.done = !task.done;
+    this.taskService.update(task);
   }
 
   public showDialog(): void {

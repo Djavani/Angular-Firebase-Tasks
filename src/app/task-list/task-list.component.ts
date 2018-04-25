@@ -37,4 +37,8 @@ export class TaskListComponent implements OnInit {
     this.dialog.open(TaskDialogComponent, config);
   }
 
+  public onDelete(task: Task): void {
+    this.taskService.delete(task);
+  }
+
 }

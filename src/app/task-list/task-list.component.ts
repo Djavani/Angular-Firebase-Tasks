@@ -36,8 +36,4 @@ export class TaskListComponent implements OnInit {
     this.dialog.open(TaskDialogComponent);
   }
 
-  public onSave(): void {
-
-  }
-
 }

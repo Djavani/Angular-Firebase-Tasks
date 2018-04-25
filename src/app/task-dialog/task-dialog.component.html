@@ -3,12 +3,20 @@
 <mat-dialog-content>
 
   <mat-form-field>
-    <input type="text" matInput>
+    <input
+      type="text"
+      placeholder="Title"
+      matInput
+      [(ngModel)]="task.title"
+      (keyup.enter)="onSave()"
+      required
+      minlength="3"
+      #titleControl="ngModel">
   </mat-form-field>
 
 </mat-dialog-content>
 
 <mat-dialog-actions>
   <button mat-button mat-dialog-clone>Cancel</button>
-  <button mat-button (click)="onSave()">Save</button>
+  <button mat-button [disabled]="titleControl.invalid" (click)="onSave()">Save</button>
 </mat-dialog-actions>

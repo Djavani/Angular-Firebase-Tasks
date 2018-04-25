@@ -13,12 +13,14 @@ import {
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { TaskItemComponent } from './task-item/task-item.component';
+import { TaskListComponent } from './task-list/task-list.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TaskItemComponent
+    TaskItemComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserAnimationsModule,

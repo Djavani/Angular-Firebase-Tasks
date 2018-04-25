@@ -15,7 +15,8 @@ import {
   MatDialogModule,
   MatInputModule,
   MatFormFieldModule,
-  MatMenuModule} from '@angular/material';
+  MatMenuModule,
+  MatProgressSpinnerModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -48,6 +49,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
     MatListModule,
     MatMenuModule,
     MatLineModule,
+    MatProgressSpinnerModule,
     MatSlideToggleModule,
     MatToolbarModule
   ],

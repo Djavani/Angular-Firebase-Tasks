@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs/Observable';
+import { MatDialog } from '@angular/material';
 
 import { Task } from './../models/tasks.models';
 import { TaskService } from '../task.service';
+import { TaskDialogComponent } from './../task-dialog/task-dialog.component';
 
 @Component({
   selector: 'app-task-list',
@@ -17,6 +19,7 @@ export class TaskListComponent implements OnInit {
   selectedTask: Task;
 
   constructor(
+    private dialog: MatDialog,
     private taskService: TaskService
   ) { }
 
@@ -26,6 +29,14 @@ export class TaskListComponent implements OnInit {
 
   onPerformTask(task: Task): void {
     console.log(task);
+
+  }
+
+  public showDialog(): void {
+    this.dialog.open(TaskDialogComponent);
+  }
+
+  public onSave(): void {
 
   }
 

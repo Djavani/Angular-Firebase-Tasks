@@ -8,25 +8,40 @@ import {
   MatToolbarModule,
   MatListModule,
   MatLineModule,
-  MatSlideToggleModule} from '@angular/material';
+  MatSlideToggleModule,
+  MatButtonModule,
+  MatIconModule,
+  MatDialogModule,
+  MatInputModule,
+  MatFormFieldModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment.prod';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TaskItemComponent,
-    TaskListComponent
+    TaskListComponent,
+    TaskDialogComponent
+  ],
+  entryComponents: [
+    TaskDialogComponent
   ],
   imports: [
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    MatButtonModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatInputModule,
     MatListModule,
     MatLineModule,
     MatSlideToggleModule,

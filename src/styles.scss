@@ -16,4 +16,9 @@ $custom-typography: mat-typography-config(
   $body-1: mat-typography-level(16px, 24px, 500)
 );
 
+.fab-botton-right {
+  position: fixed !important;
+  bottom: 15px;
+  right: 15px;
+}
 

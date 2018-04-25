@@ -14,7 +14,8 @@ import {
   MatIconModule,
   MatDialogModule,
   MatInputModule,
-  MatFormFieldModule} from '@angular/material';
+  MatFormFieldModule,
+  MatMenuModule} from '@angular/material';
 
 
 import { AppComponent } from './app.component';
@@ -45,6 +46,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
     MatIconModule,
     MatInputModule,
     MatListModule,
+    MatMenuModule,
     MatLineModule,
     MatSlideToggleModule,
     MatToolbarModule

@@ -32,7 +32,9 @@ export class TaskListComponent implements OnInit {
     this.taskService.update(task);
   }
 
-  public showDialog(): void {
+  public showDialog(task?: Task): void {
+    console.log(task);
+
     this.dialog.open(TaskDialogComponent);
   }
 

@@ -24,6 +24,7 @@ import { environment } from '../environments/environment.prod';
 import { TaskItemComponent } from './task-item/task-item.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDialogComponent } from './task-dialog/task-dialog.component';
+import { CustomAngularFirestoreModule } from '../core/core.module';
 
 
 @NgModule({
@@ -37,9 +38,10 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
     TaskDialogComponent
   ],
   imports: [
+    CustomAngularFirestoreModule.enablePersistence(),
     BrowserAnimationsModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,
+    // AngularFirestoreModule.enablePersistence(),
     FormsModule,
     MatButtonModule,
     MatDialogModule,
@@ -61,5 +63,7 @@ import { TaskDialogComponent } from './task-dialog/task-dialog.component';
 export class AppModule {
   constructor( private afs: AngularFirestore ) {
     afs.app.firestore().settings({ timestampsInSnapshots: true });
+
   }
  }
+
